@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "⬇️ Installing Claude Code CLI..."
-npm install -g claude-code
+npm install -g @anthropic-ai/claude-code
 
 echo "🚀 Installing Claude Code MCP servers..."
 
