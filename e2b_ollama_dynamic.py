@@ -211,7 +211,7 @@ def main():
         cleaned_result = str(result)  # Ensure it's a string
     
     # Save results
-    output_file = f"ufc_dynamic_output.txt"
+    output_file = f"output/ufc_dynamic_output.txt"
     with open(output_file, "w") as f:
         f.write(f"QUESTION:\n{args.question}\n\n")
         f.write("FINAL CODE:\n\n")

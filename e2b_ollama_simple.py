@@ -93,7 +93,7 @@ with open("/fighter_info.csv", "w") as f:
             result = execution.logs.stdout
 
 # Save both the code and results
-with open("ufc_basic1_ollama_e2b_output.txt", "w") as f:
+with open("output/ufc_basic1_ollama_e2b_output.txt", "w") as f:
     f.write("GENERATED CODE:\n\n")
     f.write(code)
     f.write("\n\nRESULTS:\n\n")
