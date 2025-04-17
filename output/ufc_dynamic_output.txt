@@ -1,0 +1,24 @@
+QUESTION:
+Tell me the top 10 fighters with the most submission wins in order
+
+FINAL CODE:
+
+def custom_date_parser(x):
+       return parse(x, dayfirst=1, yearfirst=True)
+
+   import pandas as pd
+   df = pd.read_csv('/fighter_info.csv', date_parser=custom_date_parser)
+   df['Birth Date'] = pd.to_datetime(df['Birth Date'])
+
+   # Assuming 'Birth Date' column is the one causing issues
+   df['Birth Date'] = df['Birth Date'].apply(lambda x: pd.to_datetime(x).normalize())
+
+This code first defines a custom date parser that uses yearfirst=True instead of dayfirst=1, then reads in the CSV file and converts the 'Birth Date' column to datetime format. The normalize() function is applied to ensure the output time is midnight at the beginning of the day.
+
+RESULTS:
+
+Error: IndentationError: unindent does not match any outer indentation level (<tokenize>, line 5)
+  File <tokenize>:5
+    import pandas as pd
+    ^
+IndentationError: unindent does not match any outer indentation level
