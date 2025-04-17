@@ -37,12 +37,13 @@ prompt_template = ChatPromptTemplate.from_messages([
 ])
 
 tools = [execute_python_with_ufc_data]
-# llm = ChatOllama(model="mistral:7b")
-llm = ChatOllama(model="mistral:7b-instruct")
+llm = ChatOllama(model="mistral:7b")
+# llm = ChatOllama(model="mistral:7b-instruct")
 # llm = ChatOllama(model="llama3.1:latest")
 # llm = ChatOllama(model="cogito:8b")
 # llm = ChatOllama(model="deepseek-r1:7b")
 # llm = ChatOllama(model="qwen2.5:latest")
+# llm = ChatOllama(model="qwq:32b")
 
 agent = create_tool_calling_agent(llm, tools, prompt_template)
 agent_executor = AgentExecutor(agent=agent, tools=tools)
